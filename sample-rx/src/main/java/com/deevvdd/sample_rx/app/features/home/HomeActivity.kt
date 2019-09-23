@@ -21,7 +21,7 @@ class HomeActivity : MviActivity<HomeViewModel, HomeViewState, HomeEvent>() {
 
     private lateinit var photoAdapter: PhotoAdapter
     override fun setUpLayout() {
-
+        setContentView(R.layout.activity_home)
     }
 
     override fun getViewModel(): HomeViewModel {
@@ -52,7 +52,6 @@ class HomeActivity : MviActivity<HomeViewModel, HomeViewState, HomeEvent>() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_home)
         photoAdapter = PhotoAdapter()
         rvPhoto.apply {
             adapter = photoAdapter
